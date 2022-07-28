@@ -2,13 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-img {
-  width: 70px;
-  height: 64px;
-  vertical-align: middle;
-  line-height: 1.5;
-}
-
 h1 {
   color: #272142;
   font-size: 30px;
@@ -54,12 +47,7 @@ li::first-letter {
   margin-bottom: 5px;
 }
 
-.weather .logo {
-  max-width: 150px;
-  display: block;
-}
-
-.weather-temperature img {
+weather-temperature img {
   margin-right: 10px;
   height: 64px;
   width: 64px;
@@ -85,4 +73,23 @@ li::first-letter {
 }
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color: #000;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
