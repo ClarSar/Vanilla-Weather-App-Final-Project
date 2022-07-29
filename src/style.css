@@ -2,6 +2,14 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  font-family: "Shadows Into Light", cursive;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-align: right;
+  color: #272142;
+}
+
 h1 {
   color: #272142;
   font-size: 30px;
