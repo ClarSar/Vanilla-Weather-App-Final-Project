@@ -114,4 +114,19 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function showPosition(position) {
+  let apiKey = "749d11da7cc4bf5dcb36a5fdf40ecee1";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+let locationButton = document.querySelector("#location-button");
+locationButton.addEventListener("click", getCurrentPosition);
+
 search("Galway");
